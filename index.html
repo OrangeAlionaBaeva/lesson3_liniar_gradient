@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3_Liniar-gradient</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+    <h3>Домашнее задание №3</h3>
+    <ol class="wsnumber1">
+        <li>Создать контейнер, к которому будет применен liniar-gradient</li>
+        <li>Сделать radio или checkbox ,при переключении которых будет появляться окно с разными background</li>
+        <li>Для background использовать linear-gradient or radial-gradient</li>
+        <li>Сделать кнопочку reset, при клике на неё чтобы все сбрасывалось</li>
+        <li>Отобразить смайлик, чтоб был виден вне зависимости от переключения</li>
+    </ol>
+    <hr>
+    <div class="main">
+
+        <div class="options">
+            <h3>Выберите вариант background для контейнера</h3>
+
+            <input id="right-left" type="radio" name="radio" class="rdo">
+            <label for="right-left">
+                <div class="custom-radio__label">
+                    Градиент справа налево
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="left-right" type="radio" name="radio" class="rdo">
+            <label for="left-right">
+                <div class="custom-radio__label">
+                    Градиент слева направо
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="center" type="radio" name="radio" class="rdo">
+            <label for="center">
+                <div class="custom-radio__label">
+                    Градиент от центра
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="deg85" type="radio" name="radio" class="rdo">
+            <label for="deg85">
+                <div class="custom-radio__label">
+                    Градиент 85deg
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="deg21" type="radio" name="radio" class="rdo">
+            <label for="deg21">
+                <div class="custom-radio__label">
+                    Градиент 21deg
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="deg135_100" type="radio" name="radio" class="rdo">
+            <label for="deg135_100">
+                <div class="custom-radio__label">
+                    Градиент 135deg 100%
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="horizontal" type="radio" name="radio" class="rdo">
+            <label for="horizontal">
+                <div class="custom-radio__label">
+                    Градиент горизонтальные линии
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            <input id="vertical" type="radio" name="radio" class="rdo">
+            <label for="vertical">
+                <div class="custom-radio__label">
+                    Градиент вертикальный спектр
+                </div>
+            </label>
+            <div class="clear"></div>
+
+            
+
+
+
+
+            <div class="reset">
+                <h3>Нажмите reset для сброса background контейнера</h3>
+                <button id="qwerty" onclick="resetDiv()">RESET</button>
+            </div>
+
+            <!-- <div class="explanation">
+                Выбраный вами градиент:
+            </div> -->
+
+
+
+            <div id="container" class="container">
+                <div class="img_container">
+                    <div class="img">
+                        <img src="./Emoji.png" alt="emoji">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <script>
+        function resetDiv() {
+            var elements = document.getElementsByTagName("input");
+
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].type == "radio") {
+                    elements[i].checked = false;
+                }
+            }
+
+            document.getElementById('container-value').innerHTML = '';
+        };
+    </script>
+</body>
+
+</html>
